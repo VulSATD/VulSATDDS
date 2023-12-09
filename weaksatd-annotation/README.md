@@ -28,9 +28,10 @@ The single function are taken from the previous step and merged into a single CS
 python mergeFiles
 ```
 ## Annotate with WeakSATD
-The CSV file from the previous step is loaded and the code is evaluated against the tool WeakSATD. The first parameter is the filename. Followed by the chunk which is evaluated and the total number of parts, so that the time-consuming task can be parallelized. If set to `1 1` the entir dataset is labelled at the same time. 
+The CSV file from the previous step is loaded and the code is evaluated against the tool WeakSATD. The first parameter is the filename. Followed by the chunk which is evaluated and the total number of chunks, so that the time-consuming task can be parallelized. If set to `1 1` the entir dataset is labelled at the same time. 
+The script needs to be executed X-times which relfects the total number of chunks selected.
 ```
-npm run annotateForVulnerabilities complete.csv 2 2
+npm run annotateForVulnerabilities complete.csv 1 10
 ```
 
 ## Annotate for SATD
@@ -38,3 +39,6 @@ Lastly the missing columns (SATD, HasComments, Comments, CommitID, FunctionWitho
 ```
 python annotateForSATD.py --input-path . --output-path .
 ```
+
+### Note
+`Function` is not a column in this part of the dataset since it is intented to refer to the original column of a dataset. Which is part of the replication package not the case as a dataset is newly created rather than extended.
