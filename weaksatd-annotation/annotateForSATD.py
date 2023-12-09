@@ -2,7 +2,7 @@ from tqdm import tqdm
 from argparse import ArgumentParser
 from utils import load_data, has_task_words, extract_comment, save_data
 
-FILENAMES = ["final"]
+FILENAMES = ["complete"]
 
 # --input-path ./cfl --output-path ../data --output-path-labelled ../data-labelled/cfl
 
@@ -22,9 +22,15 @@ def addKey(data, newKey):
     return data
 
 COMMIT_IDS = {
-    "Chromium": "57f97b2",
-    "Mozilla Firefox": "4d46db3ff28b",
-    "Linux Kernel": "e2ca6ba"
+    "chrome": "57f97b2",
+    "firefox": "4d46db3ff28b",
+    "kernel": "e2ca6ba"
+}
+
+PROJECT_NAMES = {
+    "chrome": "Chromium",
+    "firefox": "Mozilla Firefox",
+    "kernel": "Linux Kernel"
 }
 
 if __name__ == "__main__":

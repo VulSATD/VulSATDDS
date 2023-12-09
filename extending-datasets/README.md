@@ -1,33 +1,4 @@
-# VulSATDData replication package
-
-This repository contains the code to recreate the dataset presented in the paper "VulSATDData: a dataset for vulnerabilities and self-admitted technical debt".
-
-## Requirements
-
-We built the dataset using Python 3.10. srcML must also be installed. Given the size of the repositories, at least 100GB of free disk space are needed.
-
-## How to build the dataset
-
-The first step is to clone the repository locally with the following commands:
-
-```
-git clone https://github.com/VulSATD/VulSATDDS
-cd VulSATDDS
-cd extending-datasets
-```
-
-We recommend the creation of a virtual environment, for example, using venv (the exact commands might need to be adapted according to your system):
-
-```
-python3 -m venv env
-source env/bin/activate
-```
-
-Then, install the dependencies which are listed in the requirements.txt file. This can be done using `pip`:
-
-```
-pip install -r requirements.txt
-```
+# Extending of a dataset
 
 ### Repositories 
 

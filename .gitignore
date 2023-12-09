@@ -1,5 +1,10 @@
 .DS_Store
 *.csv
 .idea
+node_modules
+__pycache__
 *.pyc
 */env/
+weaksatd-annotation/chromiumMining
+weaksatd-annotation/linuxMining
+weaksatd-annotation/firefoxMining
